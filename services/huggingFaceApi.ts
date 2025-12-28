@@ -4,9 +4,10 @@
  * Backend Authority: Hugging Face (subhan-75/freevoice)
  */
 
+import { MASTER_EMAILS } from '../constants';
+
 const HF_SPACE_URL = "https://subhan-75-freevoice.hf.space"; 
 const HF_TOKEN = "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"; 
-const MASTER_EMAIL = 'subhanfreefire76@gmail.com';
 
 export interface UserStatus {
   isPro: boolean;
@@ -20,7 +21,8 @@ export interface UserStatus {
  * Synchronizes local Firebase user with Hugging Face Database with timeout protection.
  */
 export const syncUserWithHF = async (userId: string, email: string): Promise<UserStatus> => {
-  if (email.toLowerCase() === MASTER_EMAIL.toLowerCase()) {
+  const isMaster = MASTER_EMAILS.includes(email.toLowerCase());
+  if (isMaster) {
     return {
       isPro: true,
       proExpiry: 253370764800000, 
