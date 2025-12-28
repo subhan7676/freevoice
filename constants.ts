@@ -4,6 +4,11 @@ import { VoiceConfig } from './types';
 export const AUDIO_SAMPLE_RATE_INPUT = 16000;
 export const AUDIO_SAMPLE_RATE_OUTPUT = 24000;
 
+export const MASTER_EMAILS = [
+  'subhanfreefire76@gmail.com',
+  'azanebilal123456@gmail.com'
+];
+
 export const VOICE_PRESETS: VoiceConfig[] = [
   // --- FREE VOICES (22) ---
   { id: 'real-girl', name: 'Real Girl', description: 'Natural female voice.', instruction: 'Natural young woman voice, clear and warm.', geminiVoice: 'Kore', color: 'bg-pink-500', icon: 'REAL_GIRL', category: 'Human', isPremium: false },
