@@ -1,0 +1,7 @@
+{
+  "name": "Free Voice Pro 5",
+  "description": "Professional real-time voice transformer and studio recorder with Verbatim Mirror Protocol.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
